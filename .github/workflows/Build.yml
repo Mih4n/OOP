@@ -9,9 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        lab: [ Laboratory.First ]
 
     steps:
     - name: Checkout repository
@@ -23,19 +20,19 @@ jobs:
         dotnet-version: '9.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore ${{ matrix.lab }}
+      run: dotnet restore
 
     - name: Build solution
-      run: dotnet build ${{ matrix.lab }} --configuration Release /p:GenerateDocumentationFile=true
+      run: dotnet build --configuration Release /p:GenerateDocumentationFile=true
 
     - name: Run tests
-      run: dotnet test ${{ matrix.lab }} --configuration Release --no-build --verbosity normal
+      run: dotnet test --configuration Release --no-build --verbosity normal
 
     - name: Publish all projects into one folder
-      run: dotnet publish ${{ matrix.lab }} --configuration Release -o out/${{ matrix.lab }}
+      run: dotnet publish --configuration Release -o out/
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
         name: ${{ matrix.lab }}
-        path: out/${{ matrix.lab }}/**
+        path: out/**
