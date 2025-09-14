@@ -37,5 +37,5 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: ${{ matrix.lab }}-artifacts
+        name: ${{ matrix.lab }}
         path: out/${{ matrix.lab }}/**

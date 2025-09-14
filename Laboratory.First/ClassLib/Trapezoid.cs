@@ -75,31 +75,30 @@ public class Trapezoid
         var CD = (X: VertexD.X - VertexC.X, Y: VertexD.Y - VertexC.Y);
         var DA = (X: VertexA.X - VertexD.X, Y: VertexA.Y - VertexD.Y);
 
-        Point base1Start, base1End, base2Start, base2End;
+        Point baseFirstStart, baseFirstEnd, baseSecondStart, baseSecondEnd;
 
         if (AreVectorsParallel(AB, CD))
         {
-            base1Start = VertexA; base1End = VertexB;
-            base2Start = VertexC; base2End = VertexD;
+            baseFirstStart = VertexA; baseFirstEnd = VertexB;
+            baseSecondStart = VertexC; baseSecondEnd = VertexD;
         }
         else if (AreVectorsParallel(BC, DA))
         {
-            base1Start = VertexB; base1End = VertexC;
-            base2Start = VertexD; base2End = VertexA;
+            baseFirstStart = VertexB; baseFirstEnd = VertexC;
+            baseSecondStart = VertexD; baseSecondEnd = VertexA;
         }
         else
         {
             throw new InvalidOperationException("Трапеция не имеет параллельных оснований");
         }
 
-        double a = CalculateDistance(base1Start, base1End);
-        double b = CalculateDistance(base2Start, base2End);
+        double a = CalculateDistance(baseFirstStart, baseFirstEnd);
+        double b = CalculateDistance(baseSecondStart, baseSecondEnd);
 
         // Высота через расстояние от точки до прямой
-        double dx = base2End.X - base2Start.X;
-        double dy = base2End.Y - base2Start.Y;
-        double h = Math.Abs((dy * base1Start.X - dx * base1Start.Y + base2End.X * base2Start.Y - base2End.Y * base2Start.X)
-                            / Math.Sqrt(dx * dx + dy * dy));
+        double dx = baseSecondEnd.X - baseSecondStart.X;
+        double dy = baseSecondEnd.Y - baseSecondStart.Y;
+        double h = Math.Abs((dy * baseFirstStart.X - dx * baseFirstStart.Y + baseSecondEnd.X * baseSecondStart.Y - baseSecondEnd.Y * baseSecondStart.X) / Math.Sqrt(dx * dx + dy * dy));
 
         return (a + b) / 2 * h;
     }
@@ -128,8 +127,7 @@ public class Trapezoid
             var a = vertices[i];
             var b = vertices[(i + 1) % 4];
 
-            if ((a.Y > point.Y) != (b.Y > point.Y) &&
-                point.X < (b.X - a.X) * (point.Y - a.Y) / (b.Y - a.Y + 1e-10) + a.X)
+            if ((a.Y > point.Y) != (b.Y > point.Y) && point.X < (b.X - a.X) * (point.Y - a.Y) / (b.Y - a.Y + 1e-10) + a.X)
             {
                 count++;
             }
