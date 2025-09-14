@@ -26,11 +26,13 @@ class Program
 
         Console.WriteLine("Введите точку для проверки:");
         var p = ReadPoint("P");
-        Console.WriteLine(trapezoid.IsPointInside(p)
-            ? "Точка внутри трапеции."
-            : trapezoid.IsPointOnBorder(p)
-                ? "Точка на границе трапеции."
-                : "Точка снаружи трапеции.");
+        Console.WriteLine(
+            trapezoid.IsPointOnBorder(p)
+            ? "Точка на границе трапеции."
+            : trapezoid.IsPointInside(p)
+                ? "Точка внутри трапеции."
+                : "Точка снаружи трапеции."
+        );
     }
 
     static Point ReadPoint(string name)
