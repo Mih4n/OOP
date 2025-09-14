@@ -6,8 +6,6 @@ class Program
     {
         Console.WriteLine("Введите координаты трапеции по часовой стрелке (A, B, C, D):");
 
-        
-
         var a = ReadPoint("A");
         var b = ReadPoint("B");
         var c = ReadPoint("C");
