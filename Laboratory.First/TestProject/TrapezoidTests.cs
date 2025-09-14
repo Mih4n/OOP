@@ -12,7 +12,8 @@ public class TrapezoidTests
             new Point(0, 0),
             new Point(4, 0),
             new Point(3, 2),
-            new Point(1, 2));
+            new Point(1, 2)
+        );
 
         Assert.That(trapezoid.Exists(), Is.True);
     }
