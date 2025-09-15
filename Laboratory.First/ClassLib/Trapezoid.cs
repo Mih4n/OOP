@@ -1,15 +1,10 @@
 namespace ClassLib;
 
-using System;
-
 /// <summary>
 /// Представляет плоскую фигуру — трапецию на плоскости.
 /// </summary>
-public class Trapezoid
+public class Trapezoid : IFigure
 {
-    /// <summary>
-    /// Координаты вершин трапеции (A, B, C, D) по часовой стрелке.
-    /// </summary>
     public Point VertexA { get; set; }
     public Point VertexB { get; set; }
     public Point VertexC { get; set; }
@@ -26,10 +21,7 @@ public class Trapezoid
         VertexD = d;
     }
 
-    /// <summary>
-    /// Проверяет, может ли существовать трапеция с данными вершинами.
-    /// Трапеция существует, если есть хотя бы одна пара параллельных сторон.
-    /// </summary>
+    /// <inheritdoc/>
     public bool Exists()
     {
         var AB = (X: VertexB.X - VertexA.X, Y: VertexB.Y - VertexA.Y);
@@ -40,9 +32,7 @@ public class Trapezoid
         return AreVectorsParallel(AB, CD) || AreVectorsParallel(BC, DA);
     }
 
-    /// <summary>
-    /// Возвращает массив длин всех сторон трапеции.
-    /// </summary>
+    /// <inheritdoc/>
     public double[] GetSidesLengths()
     {
         return
@@ -54,20 +44,14 @@ public class Trapezoid
         ];
     }
 
-    /// <summary>
-    /// Вычисляет периметр трапеции.
-    /// </summary>
+    /// <inheritdoc/>
     public double GetPerimeter()
     {
         double[] sides = GetSidesLengths();
         return sides[0] + sides[1] + sides[2] + sides[3];
     }
 
-    /// <summary>
-    /// Вычисляет площадь трапеции по формуле: S = ((a + b)/2) * h
-    /// где a и b — основания, h — высота.
-    /// Основания определяются автоматически.
-    /// </summary>
+    /// <inheritdoc/>
     public double GetArea()
     {
         var AB = (X: VertexB.X - VertexA.X, Y: VertexB.Y - VertexA.Y);
@@ -103,9 +87,7 @@ public class Trapezoid
         return (a + b) / 2 * h;
     }
 
-    /// <summary>
-    /// Проверяет, принадлежит ли точка границе трапеции.
-    /// </summary>
+    /// <inheritdoc/>
     public bool IsPointOnBorder(Point point)
     {
         return IsPointOnLine(VertexA, VertexB, point) ||
@@ -114,9 +96,7 @@ public class Trapezoid
                IsPointOnLine(VertexD, VertexA, point);
     }
 
-    /// <summary>
-    /// Проверяет, принадлежит ли точка трапеции (внутри или на границе).
-    /// </summary>
+    /// <inheritdoc/>
     public bool IsPointInside(Point point)
     {
         Point[] vertices = { VertexA, VertexB, VertexC, VertexD };
@@ -136,9 +116,7 @@ public class Trapezoid
         return count % 2 == 1;
     }
 
-    /// <summary>
-    /// Проверяет, лежит ли точка на линии между двумя точками.
-    /// </summary>
+    /// <inheritdoc/>
     private bool IsPointOnLine(Point firstPoint, Point secondPoint, Point point)
     {
         double cross = (point.Y - firstPoint.Y) * (secondPoint.X - firstPoint.X) - (point.X - firstPoint.X) * (secondPoint.Y - firstPoint.Y);
