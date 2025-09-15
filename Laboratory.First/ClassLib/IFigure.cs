@@ -2,9 +2,21 @@ namespace ClassLib;
 
 public interface IFigure
 {
+    /// <summary>
+    /// первая точка
+    /// </summary>
     public Point VertexA { get; set; }
+    /// <summary>
+    /// вторая точка
+    /// </summary>
     public Point VertexB { get; set; }
+    /// <summary>
+    /// третья точка
+    /// </summary>
     public Point VertexC { get; set; }
+    /// <summary>
+    /// четвёртая точка
+    /// </summary>
     public Point VertexD { get; set; }
 
     /// <summary>

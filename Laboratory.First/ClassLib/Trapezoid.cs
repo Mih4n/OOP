@@ -5,9 +5,13 @@ namespace ClassLib;
 /// </summary>
 public class Trapezoid : IFigure
 {
+    /// <inheritdoc/>
     public Point VertexA { get; set; }
+    /// <inheritdoc/>
     public Point VertexB { get; set; }
+    /// <inheritdoc/>
     public Point VertexC { get; set; }
+    /// <inheritdoc/>
     public Point VertexD { get; set; }
 
     /// <summary>
