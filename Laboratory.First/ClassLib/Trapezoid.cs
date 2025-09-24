@@ -6,18 +6,18 @@ namespace ClassLib;
 public class Trapezoid : IFigure
 {
     /// <inheritdoc/>
-    public Point VertexA { get; set; }
+    public Vector VertexA { get; set; }
     /// <inheritdoc/>
-    public Point VertexB { get; set; }
+    public Vector VertexB { get; set; }
     /// <inheritdoc/>
-    public Point VertexC { get; set; }
+    public Vector VertexC { get; set; }
     /// <inheritdoc/>
-    public Point VertexD { get; set; }
+    public Vector VertexD { get; set; }
 
     /// <summary>
     /// Создает трапецию с указанными координатами вершин.
     /// </summary>
-    public Trapezoid(Point a, Point b, Point c, Point d)
+    public Trapezoid(Vector a, Vector b, Vector c, Vector d)
     {
         VertexA = a;
         VertexB = b;
@@ -28,10 +28,10 @@ public class Trapezoid : IFigure
     /// <inheritdoc/>
     public bool Exists()
     {
-        var AB = (X: VertexB.X - VertexA.X, Y: VertexB.Y - VertexA.Y);
-        var CD = (X: VertexD.X - VertexC.X, Y: VertexD.Y - VertexC.Y);
-        var BC = (X: VertexC.X - VertexB.X, Y: VertexC.Y - VertexB.Y);
-        var DA = (X: VertexA.X - VertexD.X, Y: VertexA.Y - VertexD.Y);
+        var AB = VertexB - VertexA;
+        var BC = VertexC - VertexB;
+        var CD = VertexD - VertexC;
+        var DA = VertexA - VertexD;
 
         return AreVectorsParallel(AB, CD) || AreVectorsParallel(BC, DA);
     }
@@ -58,12 +58,12 @@ public class Trapezoid : IFigure
     /// <inheritdoc/>
     public double GetArea()
     {
-        var AB = (X: VertexB.X - VertexA.X, Y: VertexB.Y - VertexA.Y);
-        var BC = (X: VertexC.X - VertexB.X, Y: VertexC.Y - VertexB.Y);
-        var CD = (X: VertexD.X - VertexC.X, Y: VertexD.Y - VertexC.Y);
-        var DA = (X: VertexA.X - VertexD.X, Y: VertexA.Y - VertexD.Y);
+        var AB = VertexB - VertexA;
+        var BC = VertexC - VertexB;
+        var CD = VertexD - VertexC;
+        var DA = VertexA - VertexD;
 
-        Point baseFirstStart, baseFirstEnd, baseSecondStart, baseSecondEnd;
+        Vector baseFirstStart, baseFirstEnd, baseSecondStart, baseSecondEnd;
 
         if (AreVectorsParallel(AB, CD))
         {
@@ -92,7 +92,7 @@ public class Trapezoid : IFigure
     }
 
     /// <inheritdoc/>
-    public bool IsPointOnBorder(Point point)
+    public bool IsPointOnBorder(Vector point)
     {
         return IsPointOnLine(VertexA, VertexB, point) ||
                IsPointOnLine(VertexB, VertexC, point) ||
@@ -101,9 +101,9 @@ public class Trapezoid : IFigure
     }
 
     /// <inheritdoc/>
-    public bool IsPointInside(Point point)
+    public bool IsPointInside(Vector point)
     {
-        Point[] vertices = { VertexA, VertexB, VertexC, VertexD };
+        Vector[] vertices = { VertexA, VertexB, VertexC, VertexD };
         int count = 0;
 
         for (int i = 0; i < 4; i++)
@@ -121,7 +121,7 @@ public class Trapezoid : IFigure
     }
 
     /// <inheritdoc/>
-    private bool IsPointOnLine(Point firstPoint, Point secondPoint, Point point)
+    private bool IsPointOnLine(Vector firstPoint, Vector secondPoint, Vector point)
     {
         double cross = (point.Y - firstPoint.Y) * (secondPoint.X - firstPoint.X) - (point.X - firstPoint.X) * (secondPoint.Y - firstPoint.Y);
         if (cross != 0) return false;
@@ -136,7 +136,7 @@ public class Trapezoid : IFigure
     /// <summary>
     /// Проверяет вектора на параллельность
     /// </summary>
-    private bool AreVectorsParallel((double X, double Y) firstVector, (double X, double Y) secondVector)
+    private bool AreVectorsParallel(Vector firstVector, Vector secondVector)
     {
         return (firstVector.X * secondVector.Y - firstVector.Y * secondVector.X) == 0;
     }
@@ -144,7 +144,7 @@ public class Trapezoid : IFigure
     /// <summary>
     /// Вычисляет длину стороны между двумя точками.
     /// </summary>
-    private double CalculateDistance(Point firstPoint, Point secondPoint)
+    private double CalculateDistance(Vector firstPoint, Vector secondPoint)
     {
         return Math.Sqrt(Math.Pow(secondPoint.X - firstPoint.X, 2) + Math.Pow(secondPoint.Y - firstPoint.Y, 2));
     }

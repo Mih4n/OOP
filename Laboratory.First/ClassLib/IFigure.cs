@@ -5,19 +5,19 @@ public interface IFigure
     /// <summary>
     /// первая точка
     /// </summary>
-    public Point VertexA { get; set; }
+    public Vector VertexA { get; set; }
     /// <summary>
     /// вторая точка
     /// </summary>
-    public Point VertexB { get; set; }
+    public Vector VertexB { get; set; }
     /// <summary>
     /// третья точка
     /// </summary>
-    public Point VertexC { get; set; }
+    public Vector VertexC { get; set; }
     /// <summary>
     /// четвёртая точка
     /// </summary>
-    public Point VertexD { get; set; }
+    public Vector VertexD { get; set; }
 
     /// <summary>
     /// проверяет может ли существовать фигура
@@ -28,13 +28,13 @@ public interface IFigure
     /// </summary>
     /// <param name="point">точка для проверки</param>
     /// <returns></returns>
-    public bool IsPointInside(Point point);
+    public bool IsPointInside(Vector point);
     /// <summary>
     /// проверяет стоит ли точка на границе фигуры
     /// </summary>
     /// <param name="point">точка для проверки</param>
     /// <returns></returns>
-    public bool IsPointOnBorder(Point point);
+    public bool IsPointOnBorder(Vector point);
     /// <summary>
     /// возвращает площадь фигуры 
     /// </summary>

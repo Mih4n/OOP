@@ -9,10 +9,10 @@ public class TrapezoidTests
     public void ExistsWhenTrapezoidIsValidReturnsTrue()
     {
         var trapezoid = new Trapezoid(
-            new Point(0, 0),
-            new Point(4, 0),
-            new Point(3, 2),
-            new Point(1, 2)
+            new Vector(0, 0),
+            new Vector(4, 0),
+            new Vector(3, 2),
+            new Vector(1, 2)
         );
 
         Assert.That(trapezoid.Exists(), Is.True);
@@ -22,10 +22,10 @@ public class TrapezoidTests
     public void ExistsWhenNotTrapezoidReturnsFalse()
     {
         var trapezoid = new Trapezoid(
-            new Point(0, 0),
-            new Point(2, 1),
-            new Point(3, 3),
-            new Point(1, 4)
+            new Vector(0, 0),
+            new Vector(2, 1),
+            new Vector(3, 3),
+            new Vector(1, 4)
         );
 
         Assert.That(trapezoid.Exists(), Is.False);
@@ -35,10 +35,10 @@ public class TrapezoidTests
     public void GetSidesLengthsReturnsCorrectValues()
     {
         var trapezoid = new Trapezoid(
-            new Point(0, 0),
-            new Point(4, 0),
-            new Point(3, 2),
-            new Point(1, 2)
+            new Vector(0, 0),
+            new Vector(4, 0),
+            new Vector(3, 2),
+            new Vector(1, 2)
         );
 
         var sides = trapezoid.GetSidesLengths();
@@ -51,10 +51,10 @@ public class TrapezoidTests
     public void GetPerimeterReturnsCorrectValue()
     {
         var trapezoid = new Trapezoid(
-            new Point(0, 0),
-            new Point(4, 0),
-            new Point(3, 2),
-            new Point(1, 2)
+            new Vector(0, 0),
+            new Vector(4, 0),
+            new Vector(3, 2),
+            new Vector(1, 2)
         );
 
         double perimeter = trapezoid.GetPerimeter();
@@ -66,10 +66,10 @@ public class TrapezoidTests
     public void GetAreaReturnsCorrectValue()
     {
         var trapezoid = new Trapezoid(
-            new Point(0, 0),
-            new Point(4, 0),
-            new Point(3, 2),
-            new Point(1, 2)
+            new Vector(0, 0),
+            new Vector(4, 0),
+            new Vector(3, 2),
+            new Vector(1, 2)
         );
 
         double area = trapezoid.GetArea();
@@ -81,13 +81,13 @@ public class TrapezoidTests
     public void IsPointInsideWhenPointInsideReturnsTrue()
     {
         var trapezoid = new Trapezoid(
-            new Point(0, 0),
-            new Point(4, 0),
-            new Point(3, 2),
-            new Point(1, 2)
+            new Vector(0, 0),
+            new Vector(4, 0),
+            new Vector(3, 2),
+            new Vector(1, 2)
         );
 
-        var point = new Point(2, 1);
+        var point = new Vector(2, 1);
 
         Assert.That(trapezoid.IsPointInside(point), Is.True);
     }
@@ -96,13 +96,13 @@ public class TrapezoidTests
     public void IsPointInsideWhenPointOutsideReturnsFalse()
     {
         var trapezoid = new Trapezoid(
-            new Point(0, 0),
-            new Point(4, 0),
-            new Point(3, 2),
-            new Point(1, 2)
+            new Vector(0, 0),
+            new Vector(4, 0),
+            new Vector(3, 2),
+            new Vector(1, 2)
         );
 
-        var point = new Point(5, 5);
+        var point = new Vector(5, 5);
 
         Assert.That(trapezoid.IsPointInside(point), Is.False);
     }
@@ -111,13 +111,13 @@ public class TrapezoidTests
     public void IsPointOnBorderWhenPointOnSideReturnsTrue()
     {
         var trapezoid = new Trapezoid(
-            new Point(0, 0),
-            new Point(4, 0),
-            new Point(3, 2),
-            new Point(1, 2)
+            new Vector(0, 0),
+            new Vector(4, 0),
+            new Vector(3, 2),
+            new Vector(1, 2)
         );
 
-        var point = new Point(2, 0); // лежит на AB
+        var point = new Vector(2, 0); // лежит на AB
 
         Assert.That(trapezoid.IsPointOnBorder(point), Is.True);
     }
@@ -126,13 +126,13 @@ public class TrapezoidTests
     public void IsPointOnBorderWhenPointNotOnBorderReturnsFalse()
     {
         var trapezoid = new Trapezoid(
-            new Point(0, 0),
-            new Point(4, 0),
-            new Point(3, 2),
-            new Point(1, 2)
+            new Vector(0, 0),
+            new Vector(4, 0),
+            new Vector(3, 2),
+            new Vector(1, 2)
         );
 
-        var point = new Point(2, 1);
+        var point = new Vector(2, 1);
 
         Assert.That(trapezoid.IsPointOnBorder(point), Is.False);
     }
