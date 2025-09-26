@@ -1,4 +1,4 @@
-﻿namespace ClassLib;
+﻿namespace ClassLib.Second;
 
 public record struct Vector(double X, double Y, double Z)
 {
@@ -7,7 +7,7 @@ public record struct Vector(double X, double Y, double Z)
         var (fx, fy, fz) = first;
         var (sx, sy, sz) = second;
 
-        return new Vector(fx - sx, fy - sy, fz - sy);
+        return new Vector(fx - sx, fy - sy, fz - sz);
     }
 
     public static Vector operator +(Vector first, Vector second) 
@@ -15,7 +15,7 @@ public record struct Vector(double X, double Y, double Z)
         var (fx, fy, fz) = first;
         var (sx, sy, sz) = second;
 
-        return new Vector(fx + sx, fy + sy, fz + sy);
+        return new Vector(fx + sx, fy + sy, fz + sz);
     }
 
     public static Vector operator *(Vector first, Vector second) 
@@ -23,6 +23,6 @@ public record struct Vector(double X, double Y, double Z)
         var (fx, fy, fz) = first;
         var (sx, sy, sz) = second;
 
-        return new Vector(fx * sx, fy * sy, fz * sy);
+        return new Vector(fx * sx, fy * sy, fz * sz);
     }
 }

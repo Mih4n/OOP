@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLib\ClassLib.csproj" />
+    <ProjectReference Include="..\ClassLib\ClassLib.Second.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
