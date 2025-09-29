@@ -1,39 +1,22 @@
-﻿using System.Text;
-using ClassLib.Third;
+﻿using ClassLib.Third;
 
-var A = ReadArray("A");
-var B = ReadArray("B");
-var C = ReadArray("C");
+var A = ArrayOne.Input("A");
+var B = ArrayOne.Input("B");
+var C = ArrayOne.Input("C");
 
-WriteArray(A, "A");
-WriteArray(B, "B");
-WriteArray(C, "C");
+A.Print("A");
+B.Print("B");
+C.Print("C");
 
-Console.WriteLine($"Sum is: {SumOnlyNegative(5 * A, C)}");
-Console.WriteLine($"Sum is: {SumOnlyNegative(2 * B, -A, C * 4)}");
+Console.WriteLine($"Sum is: {ArrayOne.SumOnlyNegative(5 * A, C)}");
+Console.WriteLine($"Sum is: {ArrayOne.SumOnlyNegative(2 * B, -A, C * 4)}");
 
-static ArrayOne ReadArray(string name)
+int sumA = A.SumNegatives();
+int sumB = B.SumNegatives();
+
+if (sumA > sumB)
 {
-    Console.WriteLine($"write down an array: {name}");
-    var input = Console.ReadLine();
-    var array = input?.Split(" ").Select(int.Parse);
-
-    return new ArrayOne(array?.ToArray() ?? []);
-}
-
-static void WriteArray(ArrayOne array, string name)
-{
-    var stringBuilder = new StringBuilder();
-    stringBuilder.Append("[ ");
-    foreach (var element in array)
-        stringBuilder.AppendFormat("{0}, ", element);
-    stringBuilder.Append("]");
-
-    Console.WriteLine(stringBuilder.ToString());
-}
-
-static int SumOnlyNegative(params ArrayOne[] arrays)
-{
-    return arrays
-        .Sum(a => a.Where(e => e < 0).Sum());
+    Console.WriteLine("Sum of negatives in A is greater than in B -> replacing repeated negatives...");
+    A.ReplaceNegativesWithSum(sumA);
+    A.Print("A (updated)");
 }
