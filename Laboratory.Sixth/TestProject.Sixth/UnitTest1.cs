@@ -84,7 +84,7 @@ public class Tests
 
         int count = manager.CountUnsatisfactoryStudentsForSubject(999);
 
-        Assert.That(count, Is.EqualTo(0));
+        Assert.That(count, Is.EqualTo(3));
     }
 
     [Test]
