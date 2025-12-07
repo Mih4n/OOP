@@ -73,34 +73,7 @@ public class ArrayOne : IEnumerable<int>
         for (var i = 0; i < array.Length; i++)
             result[i] = -array[i];
         return new ArrayOne(result);
-    }
-
-    /// <summary>
-    /// input array
-    /// </summary>
-    /// <param name="name"></param>
-    /// <returns></returns>
-    public static ArrayOne Input(string name)
-    {
-        Console.WriteLine($"write down an array: {name}");
-        var input = Console.ReadLine();
-        var arr = input?.Split(" ").Select(int.Parse).ToArray() ?? [];
-        return new ArrayOne(arr);
-    }
-
-    /// <summary>
-    /// print array
-    /// </summary>
-    /// <param name="name"></param>
-    public void Print(string name)
-    {
-        var stringBuilder = new StringBuilder();
-        stringBuilder.Append("[ ");
-        foreach (var element in array)
-            stringBuilder.AppendFormat("{0}, ", element);
-        stringBuilder.Append("]");
-        Console.WriteLine($"{name} = {stringBuilder}");
-    }
+    } 
 
     /// <summary>
     /// static method: sum of negative elements in multiple arrays

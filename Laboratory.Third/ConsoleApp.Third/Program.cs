@@ -1,8 +1,9 @@
 ﻿using ClassLib.Third;
+using ConsoleApp.Third;
 
-var A = ArrayOne.Input("A");
-var B = ArrayOne.Input("B");
-var C = ArrayOne.Input("C");
+var A = ArrayOneExtensions.Input("A");
+var B = ArrayOneExtensions.Input("B");
+var C = ArrayOneExtensions.Input("C");
 
 A.Print("A");
 B.Print("B");
