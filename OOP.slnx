@@ -1,0 +1,38 @@
+<Solution>
+  <Folder Name="/Laboratory.First/">
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.First/ClassLib/ClassLib.csproj" />
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.First/ConsoleApp/ConsoleApp.csproj" />
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.First/TestProject/TestProject.csproj" />
+  </Folder>
+  <Folder Name="/Laboratory.Fourth/">
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Fourth/ClassLib.Fourth/ClassLib.Fourth.csproj" />
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Fourth/ConsoleApp.Fourth/ConsoleApp.Fourth.csproj" />
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Fourth/TestProject.Fourth/TestProject.Fourth.csproj" />
+  </Folder>
+  <Folder Name="/Laboratory.Second/" />
+  <Folder Name="/Laboratory.Second/ClassLib/">
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Second/ClassLib/ClassLib.Second.csproj" />
+  </Folder>
+  <Folder Name="/Laboratory.Second/ConsoleApp/">
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Second/ConsoleApp/ConsoleApp.Second.csproj" />
+  </Folder>
+  <Folder Name="/Laboratory.Second/TestProject/">
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Second/TestProject/TestProject.Second.csproj" />
+  </Folder>
+  <Folder Name="/Laboratory.Seventh/">
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Seventh/App.Seventh/App.Seventh.csproj" />
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Seventh/ClassLib.Seventh/ClassLib.Seventh.csproj" />
+    <Project Path="Laboratory.Seventh/Seventh.WPF/Seventh.WPF.csproj" Id="81439218-6b77-438a-ae7c-4ff7af67c6c0" />
+    <Project Path="Laboratory.Seventh/TestProject.Seventh/TestProject.Seventh.csproj" />
+  </Folder>
+  <Folder Name="/Laboratory.Sixth/">
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Sixth/ClassLib.Sixth/ClassLib.Sixth.csproj" />
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Sixth/TestProject.Sixth/TestProject.Sixth.csproj" />
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Sixth/WinForms/WinForms.csproj" />
+  </Folder>
+  <Folder Name="/Laboratory.Third/">
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Third/ClassLib.Third/ClassLib.Third.csproj" />
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Third/ConsoleApp.Third/ConsoleApp.Third.csproj" />
+    <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Third/TestProject.Third/TestProject.Third.csproj" />
+  </Folder>
+</Solution>

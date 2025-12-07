@@ -14,11 +14,6 @@ public class AtelierRepository
         Console.WriteLine($"[Repository] Добавлен объект типа {product.GetType().Name}");
     }
 
-    public void AddRange(IEnumerable<object> products)
-    {
-        foreach (var p in products) Add(p);
-    }
-    
     public IEnumerable<object> GetAll() => storage;
 
     public IEnumerable<T> Find<T>(Func<T, bool> predicate)

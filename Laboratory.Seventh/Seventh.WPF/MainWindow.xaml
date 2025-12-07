@@ -1,0 +1,76 @@
+﻿<Window x:Class="Seventh.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Управление Инвентарем Ателье" Height="650" Width="850">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="🔎 Поиск и Фильтрация" Grid.Row="0" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Искать по цвету:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <TextBox Name="SearchColorTextBox" Width="100" Margin="0,0,20,0"/>
+
+                <TextBlock Text="Искать по полу:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ComboBox Name="SearchGenderComboBox" Width="100" Margin="0,0,20,0">
+                    <sys:String>Male</sys:String>
+                    <sys:String>Female</sys:String>
+                    <sys:String>Все</sys:String>
+                </ComboBox>
+
+                <Button Content="🔍 Применить фильтр" Click="FilterButton_Click" Padding="5"/>
+                <Button Content="🔄 Сброс" Click="ResetFilterButton_Click" Margin="10,0,0,0" Padding="5"/>
+            </StackPanel>
+        </GroupBox>
+
+        <ListView Grid.Row="1" Name="InventoryListView" Margin="0,5,0,10" SelectionMode="Single">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Тип" DisplayMemberBinding="{Binding Type}" Width="150"/>
+                    <GridViewColumn Header="Пол" DisplayMemberBinding="{Binding Gender}" Width="80"/>
+                    <GridViewColumn Header="Цвет" DisplayMemberBinding="{Binding Color}" Width="100"/>
+                    <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}" Width="350"/>
+                    <GridViewColumn Header="Hash" DisplayMemberBinding="{Binding DisplayId}" Width="80"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,10">
+            <Button Content="🗑️ Удалить Выбранный Элемент" Click="RemoveButton_Click" Padding="5"/>
+        </StackPanel>
+
+        <GroupBox Header="➕ Добавить Новый Элемент" Grid.Row="3">
+            <StackPanel Margin="5">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Тип:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                    <ComboBox Name="ProductTypeComboBox" Width="120" Margin="0,0,15,0">
+                        <sys:String>Jacket</sys:String>
+                        <sys:String>Trousers</sys:String>
+                        <sys:String>Skirt</sys:String>
+                        <sys:String>Suit (Trousers)</sys:String>
+                        <sys:String>Suit (Skirt)</sys:String>
+                    </ComboBox>
+
+                    <TextBlock Text="Пол:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                    <ComboBox Name="GenderComboBox" Width="80" Margin="0,0,15,0">
+                        <sys:String>Male</sys:String>
+                        <sys:String>Female</sys:String>
+                    </ComboBox>
+
+                    <TextBlock Text="Цвет:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                    <TextBox Name="ColorTextBox" Width="100" Margin="0,0,15,0" Text="Black"/>
+
+                    <Button Content="✔️ Добавить" Click="AddButton_Click" Padding="5"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
