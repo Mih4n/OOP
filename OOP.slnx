@@ -1,8 +1,8 @@
 <Solution>
   <Folder Name="/Laboratory.Eight/">
     <Project Path="Laboratory.Eight/ClassLib.Eight/ClassLib.Eight.csproj" />
-    <Project Path="Laboratory.Eight/WinForm.Eight/WinForm.Eight.csproj" />
     <Project Path="Laboratory.Eight/TestProject.Eight/TestProject.Eight.csproj" />
+    <Project Path="Laboratory.Eight/WinForm.Eight/WinForm.Eight.csproj" />
   </Folder>
   <Folder Name="/Laboratory.First/">
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.First/ClassLib/ClassLib.csproj" />
@@ -14,7 +14,10 @@
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Fourth/ConsoleApp.Fourth/ConsoleApp.Fourth.csproj" />
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Fourth/TestProject.Fourth/TestProject.Fourth.csproj" />
   </Folder>
-  <Folder Name="/Laboratory.Second/" />
+  <Folder Name="/Laboratory.Second/">
+    <Project Path="Laboratory.Second/Exceptions/Exceptions.csproj" />
+    <Project Path="WPF.Second/WPF.Second.csproj" Id="6213b628-ec3f-47d6-a52f-815e06b673a3" />
+  </Folder>
   <Folder Name="/Laboratory.Second/ClassLib/">
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Second/ClassLib/ClassLib.Second.csproj" />
   </Folder>
