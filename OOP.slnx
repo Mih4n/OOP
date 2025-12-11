@@ -1,4 +1,9 @@
 <Solution>
+  <Folder Name="/Laboratory.Eight/">
+    <Project Path="Laboratory.Eight/ClassLib.Eight/ClassLib.Eight.csproj" />
+    <Project Path="Laboratory.Eight/WinForm.Eight/WinForm.Eight.csproj" />
+    <Project Path="Laboratory.Eight/TestProject.Eight/TestProject.Eight.csproj" />
+  </Folder>
   <Folder Name="/Laboratory.First/">
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.First/ClassLib/ClassLib.csproj" />
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.First/ConsoleApp/ConsoleApp.csproj" />
