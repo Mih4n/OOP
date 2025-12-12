@@ -60,4 +60,9 @@ public class Circle : IGeometricShape
     {
         return $"Круг: Центр({x},{y}), Радиус={radius}, Цвет={ShapeColor.Name}, Площадь={Area:F2}";
     }
+
+    public string ToDataString()
+    {
+        return $"{x} {y} {radius} {ShapeColor.Name}";
+    }
 }

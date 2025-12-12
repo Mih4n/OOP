@@ -17,6 +17,12 @@ public interface IGeometricShape
     string GetInfo();
 
     /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    string ToDataString();
+
+    /// <summary>
     /// Индексатор для доступа к параметрам фигуры.
     /// </summary>
     /// <param name="index">Индекс параметра.</param>

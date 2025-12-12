@@ -81,4 +81,9 @@ public class Square : IGeometricShape
         // Если есть и плюсы и минусы по любой оси, значит пересекает четверти
         return (hasPositiveX && hasNegativeX) || (hasPositiveY && hasNegativeY);
     }
+
+    public string ToDataString()
+    {
+        return string.Join(" ", vertices.Select(v => v.ToString()));
+    }
 }
