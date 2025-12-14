@@ -222,7 +222,6 @@ public partial class Form1 : Form
         }
     }
 
-    // Logic for Circumferences
     private void CalculateCircumferences()
     {
         rtbOutput.Clear();
