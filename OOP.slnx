@@ -43,4 +43,8 @@
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Third/ConsoleApp.Third/ConsoleApp.Third.csproj" />
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Third/TestProject.Third/TestProject.Third.csproj" />
   </Folder>
+  <Folder Name="/Second.Laoratory.First/">
+    <Project Path="Second.Laoratory.First/Second.ClassLib.First/Second.ClassLib.First.csproj" />
+    <Project Path="Second.Laoratory.First/Second.Wpf.First/Second.Wpf.First.csproj" />
+  </Folder>
 </Solution>
