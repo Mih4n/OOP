@@ -83,11 +83,15 @@
 
 \
 
-= UML -- диаграмма классов системы
-
-#picture(image("image.png", height: 200pt), "UML-диаграмма классов системы")
+#picture(image("image.png", height: 150pt), "Интерфейс программы")
 
 \
+
+= UML -- диаграмма классов системы
+
+#picture(image("uml.png", height: 150pt), [UML -- диаграмма классов системы])
+
+#pagebreak()
 
 Диаграмма отображает:
 
