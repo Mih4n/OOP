@@ -1,0 +1,70 @@
+﻿<Window x:Class="Second.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Технологический процесс" Height="350" Width="600">
+
+    <Grid Margin="10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="10">
+
+            <TextBlock Text="Декораторы процесса"
+                       FontWeight="Bold"
+                       Margin="0 0 0 10"/>
+
+            <CheckBox x:Name="cbQuality"
+                      Content="Контроль качества"
+                      Checked="DecoratorChanged"
+                      Unchecked="DecoratorChanged"/>
+
+            <CheckBox x:Name="cbPackaging"
+                      Content="Упаковка"
+                      Checked="DecoratorChanged"
+                      Unchecked="DecoratorChanged"/>
+
+            <CheckBox x:Name="cbLabeling"
+                      Content="Маркировка"
+                      Checked="DecoratorChanged"
+                      Unchecked="DecoratorChanged"/>
+
+            <Separator Margin="0 10"/>
+
+            <TextBlock Text="Температурный датчик"
+                       FontWeight="Bold"
+                       Margin="0 0 0 10"/>
+
+            <Button Content="Получить температуру"
+                    Click="ReadTemperature"/>
+
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="1" Margin="10">
+
+            <TextBlock Text="Результат"
+                       FontWeight="Bold"
+                       FontSize="16"
+                       Margin="0 0 0 10"/>
+
+            <TextBlock Text="Описание процесса:" FontWeight="Bold"/>
+            <TextBlock x:Name="tbDescription"
+                       TextWrapping="Wrap"
+                       Margin="0 0 0 10"/>
+
+            <TextBlock Text="Длительность (часы):"
+                       FontWeight="Bold"/>
+            <TextBlock x:Name="tbDuration"
+                       Margin="0 0 0 20"/>
+
+            <TextBlock Text="Температура (°C):"
+                       FontWeight="Bold"/>
+            <TextBlock x:Name="tbTemperature"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

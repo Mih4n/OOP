@@ -45,6 +45,7 @@
   </Folder>
   <Folder Name="/Second.Laboratory.Second/">
     <Project Path="Second.Laboratory.Second/Second.ClassLib.Second/Second.ClassLib.Second.csproj" />
+    <Project Path="Second.Laboratory.Second/Second.Wpf.Second/Second.Wpf.Second.csproj" Id="b47ea99d-fe16-4ea5-974b-329a2bdc2df4" />
   </Folder>
   <Folder Name="/Second.Laoratory.First/">
     <Project Path="Second.Laoratory.First/Second.ClassLib.First/Second.ClassLib.First.csproj" />
