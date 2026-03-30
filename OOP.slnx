@@ -43,6 +43,9 @@
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Third/ConsoleApp.Third/ConsoleApp.Third.csproj" />
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Third/TestProject.Third/TestProject.Third.csproj" />
   </Folder>
+  <Folder Name="/Second.Laboratory.Fifth/">
+    <Project Path="Second.Laboratory.Fifth/Second.ConsoleApp.Fifth/Second.ConsoleApp.Fifth.csproj" />
+  </Folder>
   <Folder Name="/Second.Laboratory.Second/">
     <Project Path="Second.Laboratory.Second/Second.ClassLib.Second/Second.ClassLib.Second.csproj" />
     <Project Path="Second.Laboratory.Second/Second.Wpf.Second/Second.Wpf.Second.csproj" Id="b47ea99d-fe16-4ea5-974b-329a2bdc2df4" />
