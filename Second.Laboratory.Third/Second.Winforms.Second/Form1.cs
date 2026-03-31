@@ -92,7 +92,7 @@ public partial class Form1 : Form
     {
         if (double.TryParse(txtFilterThreshold.Text, out double th))
         {
-            dgvFiltered.DataSource = XmlTools.Filter("data.xml", th);
+            dgvFiltered.DataSource = GetManager().Load("data.xml").Where(s => s.Threshold > th).ToList();
             Console.WriteLine($"Filtered in {JsonSerializer.Serialize(dgvFiltered.DataSource)} ms");
         }
     }
