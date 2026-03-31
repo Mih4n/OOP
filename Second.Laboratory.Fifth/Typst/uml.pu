@@ -1,0 +1,50 @@
+@startuml diagram
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+
+class EventArgs {
+}
+
+class JamEventArgs {
+    + ItemName : string <<get>>
+    + TimeOccurred : DateTime <<get>>
+    + JamEventArgs(itemName: string)
+}
+
+EventArgs <|-- JamEventArgs
+
+class ConveyorBelt {
+    + ItemStuck : event EventHandler<JamEventArgs>
+    + SimulateWork() : void
+    # OnItemStuck(e: JamEventArgs) : void
+}
+
+class LightIndicator {
+    + OnItemStuck(sender: object, e: JamEventArgs) : void
+}
+
+class SoundAlarm {
+    + OnItemStuck(sender: object, e: JamEventArgs) : void
+}
+
+class BeltDrive {
+    + OnItemStuck(sender: object, e: JamEventArgs) : void
+}
+
+class Program {
+    {static} + Main(args: string[]) : void
+}
+
+' Relationships
+ConveyorBelt ..> JamEventArgs : "создает и передает"
+Program --> ConveyorBelt : "создает"
+Program --> LightIndicator : "создает"
+Program --> SoundAlarm : "создает"
+Program --> BeltDrive : "создает"
+
+' Event subscriptions
+LightIndicator ..> ConveyorBelt : "подписывается на ItemStuck"
+SoundAlarm ..> ConveyorBelt : "подписывается на ItemStuck"
+BeltDrive ..> ConveyorBelt : "подписывается на ItemStuck"
+
+@enduml
