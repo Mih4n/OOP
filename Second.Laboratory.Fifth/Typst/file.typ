@@ -3,7 +3,7 @@
 #show: styles.standard
 
 #(pages.title)(
-  theme: "Структурные паттерны проектирования: Декоратор (Decorator) и Адаптер (Adapter).",
+  theme: "Делегаты и события. Паттерн проектирования «Наблюдатель» (Observer).",
   course: "ООПиП",
   number: 5
 )
@@ -31,7 +31,9 @@
 
 = UML -- диаграмма классов системы
 
-#picture(image("uml.png", height: 150pt), [UML -- диаграмма классов системы])
+\
+
+#picture(image("umll.png", height: 150pt), [UML -- диаграмма классов системы])
 
 
 \
