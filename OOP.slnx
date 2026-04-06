@@ -1,5 +1,5 @@
 <Solution>
-  <Folder Name="/Laboratory.Eight/">
+  <!-- <Folder Name="/Laboratory.Eight/">
     <Project Path="Laboratory.Eight/ClassLib.Eight/ClassLib.Eight.csproj" />
     <Project Path="Laboratory.Eight/TestProject.Eight/TestProject.Eight.csproj" />
     <Project Path="Laboratory.Eight/WinForm.Eight/WinForm.Eight.csproj" />
@@ -42,9 +42,13 @@
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Third/ClassLib.Third/ClassLib.Third.csproj" />
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Third/ConsoleApp.Third/ConsoleApp.Third.csproj" />
     <Project Path="c:/Users/losev/OneDrive/Рабочий стол/job/OOP/Laboratory.Third/TestProject.Third/TestProject.Third.csproj" />
-  </Folder>
+  </Folder> -->
   <Folder Name="/Second.Laboratory.Fifth/">
     <Project Path="Second.Laboratory.Fifth/Second.ConsoleApp.Fifth/Second.ConsoleApp.Fifth.csproj" />
+  </Folder>
+  <Folder Name="/Second.Laboratory.Fourth/">
+    <Project Path="Second.Laboratory.Fourth/ERPLogisticsApp/ERPLogisticsApp.csproj" />
+    <Project Path="Second.Laboratory.Fourth/Second.ClassLib.Fourth/Second.ClassLib.Fourth.csproj" />
   </Folder>
   <Folder Name="/Second.Laboratory.Second/">
     <Project Path="Second.Laboratory.Second/Second.ClassLib.Second/Second.ClassLib.Second.csproj" />
