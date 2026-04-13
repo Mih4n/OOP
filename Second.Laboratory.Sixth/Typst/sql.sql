@@ -1,0 +1,22 @@
+-- Схема данных
+USE MetalWarehouse;
+GO
+
+CREATE TABLE Suppliers (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Materials (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Deliveries (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    SupplierId INT NOT NULL,
+    MaterialId INT NOT NULL,
+    DeliveryDate DATETIME NOT NULL DEFAULT GETDATE(),
+    FOREIGN KEY (SupplierId) REFERENCES Suppliers(Id) ON DELETE CASCADE,
+    FOREIGN KEY (MaterialId) REFERENCES Materials(Id) ON DELETE CASCADE
+);
