@@ -54,6 +54,10 @@
     <Project Path="Second.Laboratory.Second/Second.ClassLib.Second/Second.ClassLib.Second.csproj" />
     <Project Path="Second.Laboratory.Second/Second.Wpf.Second/Second.Wpf.Second.csproj" Id="b47ea99d-fe16-4ea5-974b-329a2bdc2df4" />
   </Folder>
+  <Folder Name="/Second.Laboratory.Seventh/">
+    <Project Path="Second.Laboratory.Seventh/Second.Classlib.Seventh/Second.Classlib.Seventh.csproj" />
+    <Project Path="Second.Laboratory.Seventh/Second.Winforms.Seventh/Second.Winforms.Seventh.csproj" />
+  </Folder>
   <Folder Name="/Second.Laboratory.Sixth/">
     <Project Path="Second.Laboratory.Sixth/Second.Classlib.Sixth/Second.Classlib.Sixth.csproj" />
     <Project Path="Second.Laboratory.Sixth/Second.ConsoleApp.Sixth/Second.ConsoleApp.Sixth.csproj" />
