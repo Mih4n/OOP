@@ -74,4 +74,5 @@
     <Project Path="Second.Laoratory.First/Second.ClassLib.First/Second.ClassLib.First.csproj" />
     <Project Path="Second.Laoratory.First/Second.Wpf.First/Second.Wpf.First.csproj" />
   </Folder>
+  <Project Path="Second.ConsoleApp.Nine/Second.ConsoleApp.Nine.csproj" />
 </Solution>
