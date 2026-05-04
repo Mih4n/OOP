@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Second.Laboratory.Eight/">
+    <Project Path="Second.Laboratory.Eight/Second.Wpf.Eight/Second.Wpf.Eight.csproj" />
+  </Folder>
   <!-- <Folder Name="/Laboratory.Eight/">
     <Project Path="Laboratory.Eight/ClassLib.Eight/ClassLib.Eight.csproj" />
     <Project Path="Laboratory.Eight/TestProject.Eight/TestProject.Eight.csproj" />
